@@ -10,6 +10,9 @@
    *  - hit enter
    *  - exit the dev tools (ctrl+shift+i)
    */
+  if (typeof windows === "undefined") {
+    throw new ReferenceError("script only usable in a web browser environment")
+  }
   const selectors = {
     modal: 'div[id="container-id"]',
     greyWall: 'div[class="barreiraJornada"]',
